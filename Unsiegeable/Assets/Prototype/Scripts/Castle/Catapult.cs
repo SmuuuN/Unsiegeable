@@ -16,7 +16,6 @@ public class Catapult : MonoBehaviour
     {
         CheckState();
         ChooseProp();
-      //  CancelFireOfCatapult();
         Fire();
     }
 
@@ -53,15 +52,6 @@ public class Catapult : MonoBehaviour
             _currentProp.transform.position = _catapultPlace.transform.position;
         }
         
-    }
-
-    private void CancelFireOfCatapult()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            _currentProp = null;
-            _state = States.Empty;
-        }
     }
 
     private void Fire()

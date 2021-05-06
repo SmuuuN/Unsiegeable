@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b7b4988388b2a4aa70cbf41344c97e, type: 3}
   m_Name: BarrelPropData
   m_EditorClassIdentifier: 
-  Damage: 0
-  DamageRadius: 0
-  ProjectileSpeed: 0
+  Damage: 1000
+  DamageRadius: 1
+  ProjectileSpeed: 10
   Description: 
   Splash: 0

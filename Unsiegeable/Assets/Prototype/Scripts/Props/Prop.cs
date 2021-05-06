@@ -4,8 +4,6 @@
 
 public class Prop : MonoBehaviour
 {
-    [SerializeField] private PropData _data;
-
     [SerializeField] private IPropAbility _ability;
     [SerializeField] private IHitChecker _hitChecker;
 
@@ -19,16 +17,16 @@ public class Prop : MonoBehaviour
 
     private void OnEnable()
     {
-        _hitChecker.HitHappened += OnHit;
+        _hitChecker.EnemyHitHappened += OnHit;
     }
     private void OnDisable()
     {
-        _hitChecker.HitHappened -= OnHit;
+        _hitChecker.EnemyHitHappened -= OnHit;
     }
 
     private void Attack()
     {
-        _ability.Attack(_data);
+        _ability.Attack();
     }
 
     private void SetEnemyToAttack(Enemy enemy)
@@ -40,6 +38,6 @@ public class Prop : MonoBehaviour
     {
         SetEnemyToAttack(enemy);
         Attack();
-        Destroy(gameObject);
+        
     }  
 }

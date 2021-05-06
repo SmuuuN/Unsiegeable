@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Castle : MonoBehaviour
@@ -9,6 +7,7 @@ public class Castle : MonoBehaviour
     public float HealthPoints { get => _healthPoints; private set { } }
 
     public  Action HealthChanged;
+    public Action DeathHappened;
     public void ApplyDamage(int damage)
     {
         if(damage <= 0 )
@@ -35,6 +34,6 @@ public class Castle : MonoBehaviour
 
     private void Defeat()
     {
-        //do something
+        DeathHappened?.Invoke();
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TestInput : MonoBehaviour
 {
@@ -14,6 +12,5 @@ public class TestInput : MonoBehaviour
             Physics.Raycast(ray, out var hit); 
             var pointToGo = new Vector3(-7, 2.3f, hit.point.z);            
         }
-        
     }
 }

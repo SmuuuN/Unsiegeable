@@ -1,5 +1,5 @@
 ﻿public interface IPropAbility
 {
-    void Attack(PropData data);
+    void Attack();
     void SetEnemyToAttack(Enemy enemy);
 }
