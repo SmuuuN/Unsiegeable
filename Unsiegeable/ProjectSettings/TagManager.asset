@@ -16,8 +16,8 @@ TagManager:
   - Enemy
   - Prop
   - Environment
-  - 
-  - 
+  - PostProcessing
+  - Catapult
   - 
   - 
   - 
